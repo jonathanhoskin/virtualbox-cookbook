@@ -61,7 +61,7 @@ when 'rhel', 'fedora'
     description "#{node['platform_family']} $releasever - $basearch - Virtualbox"
     baseurl "http://download.virtualbox.org/virtualbox/rpm/#{node['platform_family']}/$releasever/$basearch"
     gpgcheck true
-    gpgkey 'http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc'
+    gpgkey 'http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc'
   end
 
   package "VirtualBox-#{node['virtualbox']['version']}"
