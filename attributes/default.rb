@@ -23,11 +23,12 @@ default['virtualbox']['version'] = ''
 
 case node['platform_family']
 when 'mac_os_x'
-  default['virtualbox']['url'] = 'http://download.virtualbox.org/virtualbox/5.1.18/VirtualBox-5.1.18-114002-OSX.dmg'
+  default['virtualbox']['version'] = '5.2.14'
+  default['virtualbox']['url'] = 'https://download.virtualbox.org/virtualbox/5.2.14/VirtualBox-5.2.14-123301-OSX.dmg'
 when 'windows'
-  default['virtualbox']['url'] = 'http://download.virtualbox.org/virtualbox/5.1.18/VirtualBox-5.1.18-114002-Win.exe'
-  default['virtualbox']['version'] = '5.1.18'
+  default['virtualbox']['version'] = '5.2.14'
+  default['virtualbox']['url'] = 'https://download.virtualbox.org/virtualbox/5.2.14/VirtualBox-5.2.14-123301-Win.exe'
 #  Vbox::Helpers.vbox_version(node['virtualbox']['url'])
 when 'debian', 'rhel', 'fedora'
-  default['virtualbox']['version'] = '5.1'
+  default['virtualbox']['version'] = '5.2'
 end

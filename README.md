@@ -3,65 +3,31 @@ Description
 
 Installs Virtualbox on OS X, Debian/Ubuntu or Windows.
 
-Changes
-=======
+This is a fork of [bradleyd/virtualbox-cookbook](https://github.com/bradleyd/virtualbox-cookbook) which was a fork of original [jtimberman/virtualbox-cookbook](https://github.com/jtimberman/virtualbox-cookbook). I hacked on it to get transition from VirtualBox 5.0 to 5.1. After no sign of life from either original author during 5.2 transition I choose to stop maintaining cookbook as something that could be merged back into original author locations. See the [CHANGELOG.md](./CHANGELOG.md) for current change history. 
 
-## v2.0.1
+Usage
+=====
 
-* Update to Virtualbox-5.1 as default
-* Point to new signing keys for Ubuntu and RHEL
-* Expand test kitchen to test on Debian, Ubuntu, and centos-6
-* Add inspec test to verify install of VirtualBox-5.1
+This cookbook is not uploaded to the Supermarket.  An older (orphaned/abandoned) version is still there and instead Berks is configured to pull it from master repo on github. Primary use of this fork of the cookbook is used in  [dayne/d_devbox](https://github.com/dayne/d_devbox) cookbook by adding the following entries there:
 
-## v1.0.4
-* Add chefignore
+* `Berksfile` 
+    ```ruby
+    cookbook 'virtualbox', git: 'https://github.com/dayne/virtualbox-cookbook.git'
+    ```
+* `metadata.rb`
+    ```ruby
+    require 'virtualbox' # via git dayne/virtualbox-cookbook
+    ```
+* `receipes/default.rb`
+    ```ruby
+    include_recipe 'virtualbox'
+    ```
 
-## v1.0.3
+Development/Testing
+===================
 
-* Update `yum` dependency to version 3
-
-## v1.0.2
-
-* Changed libshadow-ruby18 dependency to ruby-shadow gem
-* Changed phpVirtualBox password to use "rawpassword" value from data bag
-* Added attribute: node['virtualbox']['webportal']['enable-apache2-default-site']
-* Fixed config.php installation directory to use node['virtualbox']['webportal']['installdir']
-
-## v1.0.1
-
-* Update install source for phpvirtualbox.
-
-## v1.0
-
-* Use platform_family attribute to expand platform support.
-* Use Oracle's VirtualBox package repositories for Debian / RHEL, and
-  the Opscode apt/yum cookbook resources accordingly.
-* Add Vbox::Helpers module in libraries/.
-* Add additional platforms supported
-* Add dependencies on required per-platform cookbooks (required for
- Chef 11's chef-solo).
-
-## v0.7.2:
-
-* Update OS X installer to use new pkg format - thanks josephholsten.
-
-## v0.7.0:
-
-* Add Windows support
-* No more "open source edition" - extension pack must now be downloaded
-  separately from Oracle.
-* Optionally install PHP web porta.
-
-## v0.6.0:
-
-* Install via Sun's package archive in Ubuntu
-* Optionally install open-source edition from the Ubuntu repository
-* Tested in Ubuntu 11.04
-
-## v0.5.0:
-
-* initial version, tested on OSX only
-
+As this is primarily targeting Ubuntu 16.04 and 18.04 systems by current maintainer the CentOS, Mac, and Windows are not really tested and may be removed in the future unless somebody choosed to test and maintain them.
+    
 Requirements
 ============
 
