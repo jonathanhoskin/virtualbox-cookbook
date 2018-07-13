@@ -11,9 +11,13 @@ version          "2.1.0"
 source_url "https://github.com/dayne/virtualbox-cookbook"
 issues_url "https://github.com/dayne/virtualbox-cookbook/issues"
 
-%w{ubuntu debian centos redhat mac_os_x windows fedora}.each do |os|
-  supports os
-end
+supports 'ubuntu'
+supports 'debian'
+
+# Not testing any of these as of v2.1.0 -- clean up later
+# %w{centos redhat mac_os_x windows fedora}.each do |os|
+#  supports os
+# end
 
 depends "dmg"
 depends "windows"

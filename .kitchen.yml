@@ -19,8 +19,12 @@ platforms:
   - name: ubuntu-16.04
   - name: ubuntu-18.04
   - name: debian-9
-  - name: centos-7
-## Not worrying about Windows as of cookbook v2.1 era
+## Stopping testing of CentOS as of v2.1 era (for now)
+#  - name: centos-7
+##
+#  Never tested Mac
+#  Will likley remove any hints of support.
+## Stopped testing of Windows as of cookbook v2.1 era
 #  - name: windows-2016
 #    driver:
 #      box: mwrock/Windows2016

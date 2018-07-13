@@ -10,7 +10,8 @@
 * switching to VirtualBox 5.2 for apt repo sources
 * _untested_ switch to 5.2.14 for mac and windows
 * removing ubuntu 16.10 in favor of 18.04
-* removing centos6 from test kitchen & using latest centos-7 and debian-8
+* removing centos6 and windows from test kitchen
+* pointed to Ubuntu/Debian GPG Key URL from VirtualBox instead of short hand key method.
 
 ## [2.0.3]
 * VirtualBox 5.1.18 as default

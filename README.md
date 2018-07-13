@@ -1,7 +1,7 @@
 Description
 ===========
 
-Installs Virtualbox on OS X, Debian/Ubuntu or Windows.
+Installs Virtualbox on Ubuntu/Debian ~~OS X, or Windows.~~
 
 This is a fork of [bradleyd/virtualbox-cookbook](https://github.com/bradleyd/virtualbox-cookbook) which was a fork of original [jtimberman/virtualbox-cookbook](https://github.com/jtimberman/virtualbox-cookbook). I hacked on it to get transition from VirtualBox 5.0 to 5.1. After no sign of life from either original author during 5.2 transition I choose to stop maintaining cookbook as something that could be merged back into original author locations. See the [CHANGELOG.md](./CHANGELOG.md) for current change history. 
 
@@ -10,24 +10,26 @@ Usage
 
 This cookbook is not uploaded to the Supermarket.  An older (orphaned/abandoned) version is still there and instead Berks is configured to pull it from master repo on github. Primary use of this fork of the cookbook is used in  [dayne/d_devbox](https://github.com/dayne/d_devbox) cookbook by adding the following entries there:
 
-* `Berksfile` 
-    ```ruby
-    cookbook 'virtualbox', git: 'https://github.com/dayne/virtualbox-cookbook.git'
-    ```
-* `metadata.rb`
-    ```ruby
-    require 'virtualbox' # via git dayne/virtualbox-cookbook
-    ```
-* `receipes/default.rb`
-    ```ruby
-    include_recipe 'virtualbox'
-    ```
-
+`Berksfile` 
+```ruby
+cookbook 'virtualbox', git: 'https://github.com/dayne/virtualbox-cookbook.git'
+```
+`metadata.rb`
+```ruby
+require 'virtualbox' # via git dayne/virtualbox-cookbook
+```
+`receipes/default.rb`
+```ruby
+include_recipe 'virtualbox'
+```
 Development/Testing
 ===================
 
-As this is primarily targeting Ubuntu 16.04 and 18.04 systems by current maintainer the CentOS, Mac, and Windows are not really tested and may be removed in the future unless somebody choosed to test and maintain them.
+As this is primarily targeting Ubuntu 16.04 and 18.04 systems by current maintainer.  
+
+The CentOS, Mac, and Windows related stuff are left around, for now, and are not tested and likely removed in the future, including references in the documentation below.
     
+
 Requirements
 ============
 
@@ -186,8 +188,8 @@ License and Author
 * Author: Ringo De Smet
 * Author: Chris Peplin
 * Author: Eric G. Wolfe <eric.wolfe@gmail.com>
-
 * Copyright 2011-2013, Joshua Timberman <cookbooks@housepub.org>
+* Author: [Dayne Broderson](https://github.com/dayne)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

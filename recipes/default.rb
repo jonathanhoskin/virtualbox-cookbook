@@ -46,7 +46,8 @@ when 'debian'
 
   apt_repository 'oracle-virtualbox' do
     uri 'http://download.virtualbox.org/virtualbox/debian'
-    key 'A2F683C52980AECF'
+    key 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
+    # 'A2F683C52980AECF'
     distribution node['lsb']['codename']
     components ['contrib']
   end
