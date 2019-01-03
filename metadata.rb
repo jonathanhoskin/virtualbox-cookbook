@@ -6,7 +6,7 @@ maintainer_email "broderson@gmail.com"
 license          "Apache 2.0"
 description      "Installs virtualbox"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "2.1.0"
+version          "2.1.1"
 
 source_url "https://github.com/dayne/virtualbox-cookbook"
 issues_url "https://github.com/dayne/virtualbox-cookbook/issues"
@@ -21,6 +21,6 @@ supports 'debian'
 
 depends "dmg"
 depends "windows"
-depends "apt"
+# depends "apt"
 depends "yum", '> 3.1'
 depends "apache2"

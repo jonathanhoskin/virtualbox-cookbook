@@ -16,9 +16,9 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-16.04
+#  - name: ubuntu-16.04
   - name: ubuntu-18.04
-  - name: debian-9
+#  - name: debian-9
 ## Stopping testing of CentOS as of v2.1 era (for now)
 #  - name: centos-7
 ##

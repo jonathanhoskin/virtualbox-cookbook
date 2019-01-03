@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## [2.1.1] - 2019-01-03
+* ensure apt repo uses amd64 architecture to prevent apt complaints about i386
+
 ## [2.1.0] - 2018-07-13
 * merging yumbranch into my own dayne/master branch
   * move README changelog entries into CHANGELOG.md and highlight fork
