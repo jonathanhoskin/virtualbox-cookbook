@@ -4,6 +4,7 @@
 
 ## [2.1.1] - 2019-01-03
 * ensure apt repo uses amd64 architecture to prevent apt complaints about i386
+* removed dependancy on 'apt' becase chef14 comes with apt commands needed
 
 ## [2.1.0] - 2018-07-13
 * merging yumbranch into my own dayne/master branch
