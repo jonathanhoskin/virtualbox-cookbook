@@ -20,7 +20,7 @@
 # For the user to be created successfully, a data bag item with the MD5 hashed password
 # needs to be added.
 
-include_recipe "apt"
+# include_recipe "apt"  ## Not longer needed, apt support is native in Chef now
 
 package "build-essential"
 gem_package "ruby-shadow"
